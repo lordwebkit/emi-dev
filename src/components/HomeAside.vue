@@ -3,8 +3,8 @@ import HomeAboutAuthor from './HomeAboutAuthor.vue'
 import HomeFeaturedPosts from './HomeFeaturedPosts.vue'
 import HomeCategories from './HomeCategories.vue'
 import HBtn from './HBtn.vue'
-import HomeSocial from './HomeSocial.vue';
-import HomeTags from './HomeTags.vue';
+import HomeSocial from './HomeSocial.vue'
+import HomeTags from './HomeTags.vue'
 </script>
 <template>
   <div class="aside">

@@ -1,6 +1,19 @@
 <script setup>
 import { ref } from 'vue'
-const tags = ref(['Business', 'Freelance', 'Money', 'Experience', 'Lifestyle', 'SEO', 'Wordpress', 'Marketing', 'UX', 'Modern', 'Success', 'Nature'])
+const tags = ref([
+  'Business',
+  'Freelance',
+  'Money',
+  'Experience',
+  'Lifestyle',
+  'SEO',
+  'Wordpress',
+  'Marketing',
+  'UX',
+  'Modern',
+  'Success',
+  'Nature'
+])
 </script>
 <template>
   <ul class="tags">
@@ -18,7 +31,7 @@ const tags = ref(['Business', 'Freelance', 'Money', 'Experience', 'Lifestyle', '
     font-size: 14px;
     line-height: 19px;
     color: #666666;
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     margin-right: 7px;
     margin-bottom: 7px;
   }

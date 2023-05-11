@@ -15,7 +15,7 @@ const socialList = ref([
 <template>
   <div class="social">
     <span class="social__item" v-for="social in socialList" :key="social">
-      <img class="social__icon" :src="`src/assets/icon/social/${social.icon}.svg`" alt="">
+      <img class="social__icon" :src="`src/assets/icon/social/${social.icon}.svg`" alt="" />
       <p class="social__quantity">{{ social.quantity }}</p>
       <p class="social__activity">{{ social.activity }}</p>
     </span>
@@ -31,7 +31,7 @@ const socialList = ref([
     width: 88px;
     height: 88px;
     display: flex;
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     flex-direction: column;
     justify-content: center;
     align-items: center;
