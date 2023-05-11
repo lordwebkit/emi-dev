@@ -24,13 +24,17 @@ const pageCount = computed(() => {
   return pageCount > 1 ? pageCount : 1
 })
 
-watch(currentPostsPage, (newValue, oldValue) => {
-  if (newValue > 2 && newValue < 4 && newValue > oldValue) {
-    pages.value = pages.value.map((page) => page + 1)
-  } else if (newValue < oldValue){
-    pages.value = pages.value.map((page) => page - 1)
-  }
-}, { immediate: true })
+watch(
+  currentPostsPage,
+  (newValue, oldValue) => {
+    if (newValue > 2 && newValue < 4 && newValue > oldValue) {
+      pages.value = pages.value.map((page) => page + 1)
+    } else if (newValue < oldValue) {
+      pages.value = pages.value.map((page) => page - 1)
+    }
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
@@ -55,26 +59,33 @@ watch(currentPostsPage, (newValue, oldValue) => {
           <i class="posts-pages__arrow"></i>
           older post
         </button>
-        <ul class="posts-pages__pagination pages-pagination" :class="{'pages-pagination--reverse': reverse}">
+        <ul
+          class="posts-pages__pagination pages-pagination"
+          :class="{ 'pages-pagination--reverse': reverse }"
+        >
           <li class="pages-pagination__item">
             <a
               class="pages-pagination__link"
-              :class="{'pages-pagination__link--active': currentPostsPage === 1}"
+              :class="{ 'pages-pagination__link--active': currentPostsPage === 1 }"
               @click.prevent="currentPostsPage = pages[0]"
-              >{{ pages[0] }}</a>
+              >{{ pages[0] }}</a
+            >
           </li>
           <li class="pages-pagination__item">
             <a
               class="pages-pagination__link"
-              :class="{'pages-pagination__link--active': currentPostsPage > 1 && currentPostsPage < pageCount - 1}"
+              :class="{
+                'pages-pagination__link--active':
+                  currentPostsPage > 1 && currentPostsPage < pageCount - 1
+              }"
               @click.prevent="currentPostsPage = pages[1]"
-              >{{ pages[1] }}</a>
+              >{{ pages[1] }}</a
+            >
           </li>
           <li class="pages-pagination__item">
-            <a
-              class="pages-pagination__link"
-              @click.prevent="currentPostsPage = pages[2]"
-              >{{ pages[2] }}</a>
+            <a class="pages-pagination__link" @click.prevent="currentPostsPage = pages[2]">{{
+              pages[2]
+            }}</a>
           </li>
           <li>...</li>
           <li class="pages-pagination__item">

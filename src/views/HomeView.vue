@@ -1,5 +1,6 @@
 <script setup>
 import HomePosts from '../components/HomePosts.vue'
+import HomeAside from '../components/HomeAside.vue'
 </script>
 
 <template>
@@ -17,13 +18,20 @@ import HomePosts from '../components/HomePosts.vue'
         </div>
       </div>
     </main>
-    <HomePosts />
+    <div class="home__content container">
+      <HomePosts />
+      <HomeAside />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .home {
   padding-bottom: 100px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .main-post {
   width: 100%;
