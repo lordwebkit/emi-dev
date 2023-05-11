@@ -2,5 +2,13 @@
 @import './variables';
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
+* {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+}
+
 .container {
+  width: 1170px;
+  margin: 0 auto;
 }
