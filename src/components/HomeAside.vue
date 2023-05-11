@@ -1,7 +1,10 @@
 <script setup>
 import HomeAboutAuthor from './HomeAboutAuthor.vue'
-import HomeFeaturedPosts from './HomeFeaturedPosts.vue';
+import HomeFeaturedPosts from './HomeFeaturedPosts.vue'
+import HomeCategories from './HomeCategories.vue'
 import HBtn from './HBtn.vue'
+import HomeSocial from './HomeSocial.vue';
+import HomeTags from './HomeTags.vue';
 </script>
 <template>
   <div class="aside">
@@ -9,6 +12,12 @@ import HBtn from './HBtn.vue'
     <HomeAboutAuthor />
     <HBtn class="aside__featured-posts">Featured posts</HBtn>
     <HomeFeaturedPosts />
+    <HBtn class="aside__categories">Categories</HBtn>
+    <HomeCategories />
+    <HBtn class="aside__social">Social media</HBtn>
+    <HomeSocial />
+    <HBtn class="aside__tags">Tags</HBtn>
+    <HomeTags />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -22,6 +31,20 @@ import HBtn from './HBtn.vue'
 
   &__featured-posts {
     margin-top: 70px;
+  }
+
+  &__categories {
+    margin-top: 70px;
+  }
+
+  &__social {
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+
+  &__tags {
+    margin-top: 70px;
+    margin-bottom: 20px;
   }
 }
 </style>
